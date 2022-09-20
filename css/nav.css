@@ -1,0 +1,44 @@
+.nav ul  {
+    list-style-type: none;
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       align-items: center;
+   
+       max-width: 100%;
+       
+     }
+     .nav a {
+       text-transform: uppercase;
+       vertical-align: middle;
+       
+       transition: all .1s;
+       color: var(--secondary);
+       text-decoration: none;
+       text-align: center;
+     }
+     .nav li {
+       justify-content: center;
+       display: flex;
+       height: 4rem;
+       flex: 1;
+       align-items: center;
+     }
+     .nav ul li a {
+       width: 100%;
+     }
+     .nav li:hover {
+       background-color: var(--secondary);
+     }
+     .nav li:hover a {
+       color: var(--primary);
+     }
+     .nav .active {
+       background-color: var(--secondary);
+     }
+     .nav .active a {
+       color: var(--primary);
+     }
+     .nav {
+       border-bottom: 1px solid var(--secondary);
+     }

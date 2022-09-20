@@ -1,0 +1,11 @@
+# Site settings
+title: Dossier visuel de Martin Lemaire 
+tagline: ""
+url: "https://clemtre.github.io" 
+# baseurl: "/erg-dossier-2022" 
+
+# Use this for production
+#sass:
+#    style: compressed
+
+exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]

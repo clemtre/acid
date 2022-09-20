@@ -1,0 +1,15 @@
+:root {
+  --primary: white;
+  --secondary: black;
+}
+
+html {
+  --primary: white;
+  --secondary: black;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    --primary: black;
+    --secondary: white;
+  }
+}
