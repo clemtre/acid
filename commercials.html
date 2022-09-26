@@ -1,0 +1,31 @@
+---
+layout: default
+title: Acid Rays
+---
+
+{% include header.html src="assets/header/cheval.png" %}
+
+{% include nav.html active=1 %}
+
+
+  
+
+{% for project in site.projects %}
+  {% if project.COM == true %}
+  {% capture wip %}{{project.wip}} {% endcapture %}
+  {% capture still %}{{project.still}} {% endcapture %}
+  {% capture title %}{{project.title}} {% endcapture %}
+  {% capture client %}{{project.client}} {% endcapture %}
+  {% capture vimeolink %}{{project.vimeolink}} {% endcapture %}
+  {% capture slug %}{{project.slug}} {% endcapture %}
+  {% capture url %}{{project.url}} {% endcapture %}
+  {% include post.html still=still vimeolink=vimeolink client=client slug=slug title=title url=url wip=wip %}  
+{% endif %}
+{% endfor %}
+
+
+
+<style>
+  
+
+</style>

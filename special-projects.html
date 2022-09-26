@@ -1,0 +1,31 @@
+---
+layout: default
+title: Acid Rays
+---
+{% include header.html src="assets/header/roncier.jpg" %}
+
+{% include nav.html active=2 %}
+
+<section class="paragraph">
+  <p>DEDICATED TO THE PRODUCTION AND CREATION OF SPECIAL PROJECTS, « RAYS » PRODUCTION FOCUSES ON LUXURY AND EXCLUSIVE CLIENTS, AS WELL AS PROJECTS THAT STAND OUT FROM THE ORDINARY.</p>
+  </section>
+
+{% for project in site.projects %}
+  {% if project.COM == true %}
+  {% capture wip %}{{project.wip}} {% endcapture %}
+  {% capture still %}{{project.still}} {% endcapture %}
+  {% capture title %}{{project.title}} {% endcapture %}
+  {% capture client %}{{project.client}} {% endcapture %}
+  {% capture vimeolink %}{{project.vimeolink}} {% endcapture %}
+  {% capture slug %}{{project.slug}} {% endcapture %}
+  {% capture url %}{{project.url}} {% endcapture %}
+  {% include post.html still=still vimeolink=vimeolink client=client slug=slug title=title url=url wip=wip %}  
+{% endif %}
+{% endfor %}
+
+
+
+<style>
+  
+
+</style>

@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% include nav.html active=4 %}
+
+<section class="paragraph"><p>
+ACID WAS FOUNDED BY DIRECTOR, PRODUCER MADO SCOTT, DI GITAL ARTIST ANTOINE BELOT, DESIGNER VIRGILE BIOSA AND SOUND AND DIGITAL ARTIST ETIENNE KAWCZAK-WIRZ. WITH A STRONG ARTISTIC APPROACH THAT IS CONSTANTLY CHALLENGED IN OUR INNOVATION DEPARTEMENT «<b>UNEXPLORED FIELDS</b>», ACID WORKS SPANS FROM COMMERCIALS TO SPECIAL PROJECTS PRODUCED BY ITS MORE EXCLUSIVE BRAND, «<b>RAYS</b>».
+</p><p>
+ACID BELIEVES IN CONTENT DRIVEN EXPERIENCES. WHAT IS SEEN OR SAID DRIVE THE HOW WE EXPERIENCE.
+</p><p>
+THIS APPROACH HAS BROUGHT BRANDS TO POSITION THEMSELVES IN A FAST-EVOLVING VIRTUAL REALM, KEEPING THEIR FOCUS ON VISION AND DNA.
+</p></section>
+
+<section class="info"></section>
+
+<section class="markee">
+
+    {% for image in site.static_files %}
+    {% if image.path contains 'assets/logos/clients' %}
+    <!-- {{ site.url }}{{site.baseurl}} -->
+    <img class="logo" src="{{ image.path }}" alt="">
+    {% endif %}
+    {% endfor %}
+</section>
+    
+<style>
+.logo {
+    width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+.markee {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+
+</style>

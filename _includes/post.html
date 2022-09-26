@@ -1,0 +1,27 @@
+<section class="projet" id="{{include.slug | rstrip}}">
+    <a href="{{include.url}}">
+        <div class="entete">
+            <p>{{ include.client }}</p>
+            <p>{{ include.title }}</p>
+        </div>
+        <div class="wrapper">
+        {% if include.vimeolink !=' ' %}
+
+            <div class="banner" style="padding:42.39% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/{{ include.vimeolink }}&autoplay=1&loop=1&title=0&byline=0&portrait=0&controls=0&dnt=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"></iframe></div>
+            
+            {% endif %}
+            {% if include.still !=' ' %}
+            {% if include.wip != ' ' %}
+            <img class="wip" src="{{ include.still }}">
+            {% else %}
+            <img src="{{ include.still }}">
+            {% endif %}
+
+            {% endif %}
+            {% if include.wip !=' ' %}
+            <p class="soon">Coming soon</p>
+            {% endif %}
+        </div>
+
+    </a>
+</section>

@@ -1,5 +1,5 @@
 # Site settings
-title: Dossier visuel de Martin Lemaire 
+title: Acid Rays 
 tagline: ""
 url: "https://clemtre.github.io" 
 # baseurl: "/erg-dossier-2022" 
@@ -9,3 +9,8 @@ url: "https://clemtre.github.io"
 #    style: compressed
 
 exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
+
+collections:
+    projects:
+      sort_by: id
+      output: true

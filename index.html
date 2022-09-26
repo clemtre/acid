@@ -1,29 +1,33 @@
 ---
 layout: default
+title: Acid Rays
 ---
+{% include header.html src="assets/header/roncier.jpg" %}
+{% include nav.html active=0 %}
+{% include acid.html %}
 
- 
-<section class="nav">
-  <ul>
-    <li class="active">
-      <a  href="index.html">Commercials</a>
-
-    </li>
-    <li>
-      <a href="index.html">Special Projects</a>
-
-    </li>
-    <li>
-      <a href="index.html">Innovation</a>
-
-    </li>
-    <li>
-      <a href="index.html">About Acid</a>
-
-    </li>
-  </ul>
-      
+<section class="paragraph">
+<p>ACID IS A METAVERSE ADVERTISING AGENCY, DEDICATED TO CREATING VIRTUAL EXPERIENCES, HYPERREALISTIC DIGITAL CAMPAIGNS AND WEB3 MARKETING AND CONSULTING. AWARDED BY THE ANDAM INNOVATION PRISE IN 2021, ACID IS DEVOTED TO THE INDUSTRIES OF FASHION, LUXURY, BEAUTY, ART, FILM AND VIDEO GAMES, AND OPERATES FROM LONDON AND PARIS.</p>
+<p>IN A SHORT SPACE OF TIME, ACID HAS MADE A NAME FOR ITSELF BY BRINGING AN EMOTIONAL LAYER TO A TECHNICAL ENVIRONMENT THROUGH POWERFUL STORYTELLING AND BRAND POSITIONING.</p>
+<p>COMPOSED BY A TEAM OF ART DIRECTORS, PRODUCERS, 3D ARTISTS AND MARKETING STRATEGISTS, ACID IS DEDICATED TO REAL-TIME AND TRADITIONAL PRODUCTION AND HAS AN IN-HOUSE MOTION CAPTURE STUDIO TO CREATE BESPOKE EXPERIENCES FOR BRANDS. AESTHETIC IN THE METAVERSE IS NOT A COMPROMISE.</p>
 </section>
+
+
+{% for project in site.projects %}
+{% if project.LAN == true %}
+{% capture wip %}{{project.wip}} {% endcapture %}
+{% capture still %}{{project.still}} {% endcapture %}
+{% capture title %}{{project.title}} {% endcapture %}
+{% capture client %}{{project.client}} {% endcapture %}
+{% capture vimeolink %}{{project.vimeolink}} {% endcapture %}
+{% capture slug %}{{project.slug}} {% endcapture %}
+{% capture url %}{{project.url}} {% endcapture %}
+{% include post.html still=still vimeolink=vimeolink client=client slug=slug title=title url=url wip=wip %}
+{% endif %}
+{% endfor %}
+
+
+
 <style>
   
 
