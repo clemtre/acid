@@ -1,4 +1,5 @@
 ---
+layout: projet
 LAN: false  
 COM: true
 SPE: false
@@ -13,3 +14,7 @@ title: cloth digitalization
 vimeolink: 
 ---
 
+# farfetch - cloth digitalization
+## september 2020
+### 3D imagery 
+#### unexplored fields

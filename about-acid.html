@@ -1,40 +1,208 @@
 ---
 layout: default
 ---
+{% include header.html src="assets/header/roncier.jpg" %}
+
 {% include nav.html active=4 %}
 
-<section class="paragraph"><p>
-ACID WAS FOUNDED BY DIRECTOR, PRODUCER MADO SCOTT, DI GITAL ARTIST ANTOINE BELOT, DESIGNER VIRGILE BIOSA AND SOUND AND DIGITAL ARTIST ETIENNE KAWCZAK-WIRZ. WITH A STRONG ARTISTIC APPROACH THAT IS CONSTANTLY CHALLENGED IN OUR INNOVATION DEPARTEMENT «<b>UNEXPLORED FIELDS</b>», ACID WORKS SPANS FROM COMMERCIALS TO SPECIAL PROJECTS PRODUCED BY ITS MORE EXCLUSIVE BRAND, «<b>RAYS</b>».
-</p><p>
-ACID BELIEVES IN CONTENT DRIVEN EXPERIENCES. WHAT IS SEEN OR SAID DRIVE THE HOW WE EXPERIENCE.
-</p><p>
-THIS APPROACH HAS BROUGHT BRANDS TO POSITION THEMSELVES IN A FAST-EVOLVING VIRTUAL REALM, KEEPING THEIR FOCUS ON VISION AND DNA.
-</p></section>
+<section class="paragraph">
+  <p>
+    ACID WAS FOUNDED BY DIRECTOR, PRODUCER MADO SCOTT, DI GITAL ARTIST ANTOINE
+    BELOT, DESIGNER VIRGILE BIOSA AND SOUND AND DIGITAL ARTIST ETIENNE
+    KAWCZAK-WIRZ. WITH A STRONG ARTISTIC APPROACH THAT IS CONSTANTLY CHALLENGED
+    IN OUR INNOVATION DEPARTEMENT «<b>UNEXPLORED FIELDS</b>», ACID WORKS SPANS
+    FROM COMMERCIALS TO SPECIAL PROJECTS PRODUCED BY ITS MORE EXCLUSIVE BRAND,
+    «<b>RAYS</b>».
+  </p>
+  <p>
+    ACID BELIEVES IN CONTENT DRIVEN EXPERIENCES. WHAT IS SEEN OR SAID DRIVE THE
+    HOW WE EXPERIENCE.
+  </p>
+  <p>
+    THIS APPROACH HAS BROUGHT BRANDS TO POSITION THEMSELVES IN A FAST-EVOLVING
+    VIRTUAL REALM, KEEPING THEIR FOCUS ON VISION AND DNA.
+  </p>
+</section>
 
-<section class="info"></section>
+<section class="info">
+  <section class="A">
+    <p>CONTACT@ACIDRAYS.COM</p>
+    <p>
+      LONDON HQ: YALDING HOUSE, 2ND FLOOR W1W 5QA, UNITED KINGDOM PARIS HQ : 88
+      RUE DE LA FOLIE MERICOURT 75011 PARIS, FRANCE
+    </p>
+    <section class="socials">
+      <a href="">INSTAGRAM</a>
+      <a href="">LINKEDIN</a>
+    </section>
+    <section class="images-studio">
+      <img src="assets/about/EDN3635-Edit.png" alt="" />
+      <img src="assets/about/EDN3667-HDR.png" alt="" />
+      <img src="assets/about/EDN3688-Edit.png" alt="" />
+      <img src="assets/about/EDN3697-Edit.png" alt="" />
+    </section>
+  </section>
+  <section class="B">
+    <section class="services">
+      <h1>SERVICES</h1>
+      <h2>CREATIVE DESIGN</h2>
+      <ul>
+        <li>VIRTUAL DESIGN</li>
+        <li>IMMERSIVE VIRTUAL EXPERIENCES</li>
+        <li>AR TOOLS AND CAMPAIGNS</li>
+        <li>SET DESIGN / DIGITAL DIRECTION FOR<br>LIVE PERFORMANCES</li>
+        <li>SOUND DESIGN AND MUSIC</li>
+      </ul>
+      <h2>VIRTUAL CONSULTING</h2>
+      <ul>
+        <li>NFT AND BLOCKCHAIN</li>
+        <li>VIRTUAL BUSINESS</li>
+        <li>ANALYST</li>
+        <li>DIGITAL MARKETING</li>
+        <li>STRATEGY</li>
+      </ul>
+      <h2>NEW POST-PRODUCTION</h2>
+      <ul>
+        <li>REAL-TIME PRODUCTION</li>
+        <li>LIVE VFX</li>
+        <li>IN-HOUSE MOTION CAPTURE</li>
+        <li>CGI</li>
+      </ul>
+      <h2>PLATFORM SERVICES</h2>
+      <ul>
+        <li>PLATFORMS</li>
+        <li>MICROVERSES</li>
+        <li>PHOTO-REALISTIC</li>
+        <li>UNIVERSE CREATION</li>
+      </ul>
+    </section>
+    <section class="talks-exhib">
+      <h1>TALKS AND EXHIBITIONS</h1>
+      <section class="inline">
 
+          <h2>TALKS</h2>
+          <ul>
+        <li>ANDAM</li>
+        <li>ANTIDOTE</li>
+        <li>MINISTÈRE DE LA CULTURE</li>
+        <li>IFM</li>
+        <li>TECHNIKART MADEMOISELLE</li>
+        <li>HFW WWD</li>
+    </ul>
+</section>
+<section class="inline">
+
+    <h2>EXHIBITIONS</h2>
+    <ul>
+        <li>METAFORM EXHIBITION</li>
+    </ul>
+</section>
+</section>
+</section>
+</section>
+
+<div class="markee-wrap">
 <section class="markee">
 
-    {% for image in site.static_files %}
-    {% if image.path contains 'assets/logos/clients' %}
-    <!-- {{ site.url }}{{site.baseurl}} -->
-    <img class="logo" src="{{ image.path }}" alt="">
-    {% endif %}
-    {% endfor %}
-</section>
-    
+    <p>Clients whom we worked for include</p>
+    {% for image in site.static_files %} {% if image.path contains
+      'assets/logos/clients' %}
+      <!-- {{ site.url }}{{site.baseurl}} -->
+      <img class="logo" src="{{ image.path }}" alt="" />
+      {% endif %} {% endfor %}
+    </section>
+  </div>
+<div class="markee-wrap">
+<section class="markee">
+
+    <p>They support us</p>
+    {% for image in site.static_files %} {% if image.path contains
+      'assets/logos/partners' %}
+      <!-- {{ site.url }}{{site.baseurl}} -->
+      <img class="logo" src="{{ image.path }}" alt="" />
+      {% endif %} {% endfor %}
+    </section>
+  </div>
+  {% include footer.html %}    
+
 <style>
-.logo {
+  .logo {
     width: 100px;
     max-height: 100px;
     object-fit: contain;
-}
-.markee {
+  }
+
+  .markee {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    /* overflow-x: scroll; */
+    border: 1px solid var(--secondary);
+    border-left: none;
+    border-right: none;
+    width: max-content;
+    gap: 10px;
+    padding:10px 30px;
+    min-width: 100%;
+  }
+  .markee-wrap {
     width: 100%;
     overflow-x: scroll;
-}
+  }
 
+  .A {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+  }
+  .B {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
+  .services {
+    text-align: right;
+  }
+  .info {
+    padding: 30px 30px;
+    font-family: Helvetica;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .images-studio {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .images-studio img {
+    width: calc(50% - 5px);
+  }
+  .info ul {
+    line-height: 16px;
+    list-style-type: none;
+  }
+  .inline {
+      display: flex;
+      justify-content: space-between;
+  }
+  .inline h2 {
+    margin: 0;
+    position: absolute;
+  }
+  .inline ul {
+    margin-left: 150px;
+  }
+  h2 {
+      margin: 16px 0 ;
+      font-size: 16px;
+  }
+  .talks-exhib {
+
+  }
+  h1 {
+    margin-bottom: 23px;
+  }
 </style>

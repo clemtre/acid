@@ -1,4 +1,5 @@
 ---
+layout: projet
 LAN: false  
 COM: true
 SPE: false

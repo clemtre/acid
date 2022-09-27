@@ -1,8 +1,9 @@
 # Site settings
 title: Acid Rays 
 tagline: ""
-url: "https://clemtre.github.io" 
 # baseurl: "/erg-dossier-2022" 
+url: http://localhost
+baseurl: /
 
 # Use this for production
 #sass:

@@ -1,4 +1,4 @@
-a, p ,h1, h2, h3 {
+a, p ,h1, h2, h3, h4, ul, li {
     color: var(--secondary);
     font-family: Helvetica;
 }
@@ -37,9 +37,10 @@ iframe {
 .entete p {
     margin: 0;
     padding: 10px 10px;
-    /* transform: translateY(3px); */
 }
 .entete p:first-of-type {
+    min-width: 200px;
+    text-align: center;
     padding: 10px 50px;
     border-right: 1px solid var(--secondary);
 }
@@ -90,6 +91,7 @@ iframe {
 .projet img {
     float: left;
     width: 100%;
+    
     transition: all .5s;
 }
 
