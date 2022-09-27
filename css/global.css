@@ -27,6 +27,8 @@ iframe {
     top: 0;
     box-sizing: content-box;
     border: 1px solid var(--secondary);
+    border-left: none;
+    border-right: none;
 }
 .projet a {
     text-decoration: none;
@@ -95,7 +97,7 @@ iframe {
     transition: all .5s;
 }
 
-.projet:hover img {
+.projet:hover .wip {
     filter: blur(5px);
 }
 

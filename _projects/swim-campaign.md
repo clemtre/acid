@@ -1,6 +1,6 @@
 ---
 layout: projet
-LAN: true
+LAN: false
 COM: true
 SPE: false
 INN: false
