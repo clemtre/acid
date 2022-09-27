@@ -22,6 +22,7 @@ iframe {
     display: flex;
     flex-direction: row;
     /* gap: 10px; */
+    flex-wrap: wrap;
     text-transform: uppercase;
     position: relative;
     top: 0;
@@ -41,7 +42,7 @@ iframe {
     padding: 10px 10px;
 }
 .entete p:first-of-type {
-    min-width: 200px;
+    width: min(200px, 100%);
     text-align: center;
     padding: 10px 50px;
     border-right: 1px solid var(--secondary);

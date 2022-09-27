@@ -15,3 +15,5 @@ vimeolink: 752035439?h=93d9601888
 ---
 
 # aitor throup
+
+![](/assets/projets/hoodie.png){:class="img-1"}

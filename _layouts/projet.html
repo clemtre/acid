@@ -7,37 +7,37 @@
 <!--<![endif]-->
 
 {% include head.html %}
-	
-	<body>
-		<!--[if lt IE 8]>
-		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-		{% if page.still !=' ' %}
-			<img class="banner-still" src="{{page.still | relative_url}}" alt="">
-{% endif %}
-		{% if page.vimeolink !=' ' %}
 
-		<div class="banner" style="padding:42.39% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/{{ page.vimeolink }}&autoplay=1&loop=1&title=0&byline=0&portrait=0&controls=0&dnt=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"></iframe></div>
-		
+<body>
+	{% if page.still !=' ' %}
+	<img class="banner-still" src="{{page.still | relative_url}}" alt="">
+	{% endif %}
+	{% if page.vimeolink !=' ' %}
+
+	<div class="banner" style="padding:42.39% 0 0 0;position:relative;"><iframe
+			src="https://player.vimeo.com/video/{{ page.vimeolink }}&autoplay=1&loop=1&title=0&byline=0&portrait=0&controls=0&dnt=1"
+			style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"></iframe></div>
+
+	{% endif %}
+	<div class="nav-projet">
+		{% if page.previous.url %}
+		<a class="prev" href="{{page.previous.url | where: 'wip', empty}}">&laquo; prev</a>
 		{% endif %}
-		<div class="nav-projet">
-			{% if page.previous.url %}
-			  <a class="prev" href="{{page.previous.url}}">&laquo; prev</a>
-			{% endif %}
-			{% if page.next.url %}
-			  <a class="next" href="{{page.next.url}}">next &raquo;</a>
-			{% endif %}
-		  </div>
-		  <div id="titre-wrapper"></div>
-		  <div id="credits-wrapper"></div>
-		  <div id="content">
-
-			  {{ content }}
-			</div>
+		{% if page.next.url %}
+		<a class="next" href="{{page.next.url | where: 'wip', empty}}">next &raquo;</a>
+		{% endif %}
+	</div>
+	<div id="titre-wrapper"></div>
+	<div id="credits-wrapper"></div>
+	<hr>
+	<div id="content">
 		
-	</body>
+		{{ content }}
+	</div>
 
-	
+</body>
+
+
 </html>
 <style>
 	* {
@@ -45,98 +45,127 @@
 		font-weight: 100;
 		font-family: Helvetica;
 	}
+
 	.credits-ligne {
 		width: 100%;
 		justify-content: center;
 		gap: 10px;
 		display: flex;
 	}
-	h1, h2 {
+
+	h1,
+	h2 {
 		width: 100%;
 		text-align: center;
 	}
-	h3,h4 {
+
+	h3,
+	h4 {
 		margin: 0;
 		font-size: 16px;
 	}
+
 	h3 {
 		font-weight: 50;
 		opacity: .5;
 	}
+
 	h4 {
 		opacity: .8;
 		font-weight: 150;
 	}
+
 	img {
+		object-fit: contain;
 		display: block;
 		max-width: 100%;
 	}
-	.ctn-img-3, .ctn-img-2, .ctn-img-4 {
+
+	.ctn-img-3,
+	.ctn-img-2,
+	.ctn-img-4 {
 		display: flex;
 		flex-direction: row;
 		/* flex-wrap: wrap; */
 	}
+
 	.img-4 {
 		width: 25%;
 	}
+
 	.img-2 {
-		width: 40%;
+		width: 50%;
 	}
+
 	.img-3 {
 		width: 33.33%;
 		object-fit: cover;
 	}
+
 	.img-1 {
 		width: 100%;
 	}
+
 	.banner-still {
 		width: 100%;
 	}
-	
+	hr {
+		margin: 0;
+		padding:0;
+		margin-top: 20px;
+		border-top: 1px solid var(--secondary);
+	}
 </style>
 <script>
+	$('#content p *').unwrap()
 
-const h3 = document.querySelectorAll('h3')
-const h4 = document.querySelectorAll('h4')
+	const h3 = document.querySelectorAll('h3')
+	const h4 = document.querySelectorAll('h4')
 
-const titre = document.querySelectorAll('h1')[0]
-const date = document.querySelectorAll('h2')[0]
+	const titre = document.querySelectorAll('h1')[0]
+	const date = document.querySelectorAll('h2')[0]
 
-const titreWrapper = document.getElementById('titre-wrapper')
-titreWrapper.appendChild(titre)
-titreWrapper.appendChild(date)
+	const titreWrapper = document.getElementById('titre-wrapper')
+	titreWrapper.appendChild(titre)
+	titreWrapper.appendChild(date)
 
-$('#content p *').unwrap()
-
-const img2 = $('.img-2')
-for(var i = 0; i < img2.length; i+=2) {
-  img2.slice(i, i+2).wrapAll("<div class='ctn-img-2'></div>");
-}
-
-const img3 = $('.img-3')
-for(var i = 0; i < img3.length; i+=3) {
-  img3.slice(i, i+3).wrapAll("<div class='ctn-img-3'></div>");
-}
-const img4 = $('.img-4')
-for(var i = 0; i < img4.length; i+=4) {
-  img4.slice(i, i+4).wrapAll("<div class='ctn-img-4'></div>");
-}
-
-for(let i = 0; i < h3.length; i++){
-	let wrapper = document.createElement('div')
-	wrapper.appendChild(h3[i]) 
-	wrapper.appendChild(h4[i])
-	wrapper.setAttribute('class', 'credits-ligne')
-	document.getElementById('credits-wrapper').appendChild(wrapper)
-	 
-}
-
-$('em.vimeo').each(
-	function(){
-		$(this).wrap('<div class="video"></div>')
-		const url = this.innerHTML
+	console.log($('.img-2'))
+	
+	if ($('.img-2')) {
+		const img2 = $('.img-2')
+		for (let i = 0; i < img2.length; i += 2) {
+			img2.slice(i, i + 2).wrapAll("<div class='ctn-img-2'></div>");
+		}
 	}
-)
+
+	const img3 = $('.img-3')
+	if (img3.length != 0) {
+		for (var i = 0; i < img3.length; i += 3) {
+			img3.slice(i, i + 3).wrapAll("<div class='ctn-img-3'></div>");
+		}
+	}
+	const img4 = $('.img-4')
+	if (img4.length != 0) {
+		for (var i = 0; i < img4.length; i += 4) {
+			img4.slice(i, i + 4).wrapAll("<div class='ctn-img-4'></div>");
+		}
+	}
+
+	for (let i = 0; i < h3.length; i++) {
+		let wrapper = document.createElement('div')
+		wrapper.appendChild(h3[i])
+		wrapper.appendChild(h4[i])
+		wrapper.setAttribute('class', 'credits-ligne')
+		document.getElementById('credits-wrapper').appendChild(wrapper)
+
+	}
+
+	// $('em.vimeo').each(
+	// 	function () {
+	// 		$(this).wrap('<div class="video"></div>')
+	// 		const url = this.innerHTML
+	// 	}
+	// )
 
 
 </script>
