@@ -28,8 +28,8 @@ layout: default
   <section class="A">
     <p>CONTACT@ACIDRAYS.COM</p>
     <p>
-      LONDON HQ: YALDING HOUSE, 2ND FLOOR W1W 5QA, UNITED KINGDOM PARIS HQ : 88
-      RUE DE LA FOLIE MERICOURT 75011 PARIS, FRANCE
+      LONDON HQ : YALDING HOUSE, 2ND FLOOR W1W 5QA, UNITED KINGDOM <br>
+      PARIS HQ : 88 RUE DE LA FOLIE MERICOURT 75011 PARIS, FRANCE
     </p>
     <section class="socials">
       <a href="">INSTAGRAM</a>
@@ -110,6 +110,8 @@ layout: default
       <!-- {{ site.url }}{{site.baseurl}} -->
       <img class="logo" src="{{ image.path }}" alt="" />
       {% endif %} {% endfor %}
+      <div class="markee-fade"></div>
+    
     </section>
   </div>
 <div class="markee-wrap">
@@ -121,14 +123,15 @@ layout: default
       <!-- {{ site.url }}{{site.baseurl}} -->
       <img class="logo" src="{{ image.path }}" alt="" />
       {% endif %} {% endfor %}
+      <div class="markee-fade"></div>
     </section>
   </div>
   {% include footer.html %}    
 
 <style>
   .logo {
-    width: 100px;
-    max-height: 100px;
+    max-width: 150px;
+    height: 50px;
     object-fit: contain;
   }
 
@@ -141,9 +144,11 @@ layout: default
     border-left: none;
     border-right: none;
     width: max-content;
-    gap: 10px;
-    padding:10px 30px;
+    gap: 50px;
+    padding:30px 0;
     min-width: 100%;
+    padding-left: 20px;
+    padding-right: 100px;
   }
   .markee-wrap {
     width: 100%;
@@ -153,11 +158,16 @@ layout: default
   .A {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     max-width: 800px;
+    gap: 16px;
+  }
+  .A * {
+    margin: 0;
   }
   .B {
-    gap: 10px;
+    gap: 50px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -171,17 +181,24 @@ layout: default
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 100px;
   }
   .images-studio {
     gap: 10px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: auto;
   }
   .images-studio img {
-    width: calc(50% - 5px);
+    width: calc(40% - 5px);
+  }
+  .info li {
+    opacity: .8;
+    max-width: 100%;
   }
   .info ul {
-    line-height: 16px;
+
+    line-height: 20px;
     list-style-type: none;
   }
   .inline {
@@ -203,6 +220,15 @@ layout: default
 
   }
   h1 {
+    font-size: 24px;
+    font-weight: 100;
     margin-bottom: 23px;
+  }
+  .markee-fade{
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); 
+    position: absolute;
+    right: 0;
   }
 </style>

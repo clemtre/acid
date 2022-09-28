@@ -18,7 +18,9 @@ vimeolink: 752035516?h=3bff9adc61
 ## october 2021 
 ### art direction and production
 #### acid 
-video
+
+ANIM SHOES 360 : <div style="padding:43.48% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/750883711?h=77726d675b
+REALTIME1 : <div style="padding:45% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/752510601?h=11545fabd7
 ![](/assets/projets/AUDRICK_1.jpg){:class="img-1"}
 video
 ![](/assets/projets/AUDRICK_2.jpg){:class="img-2"}

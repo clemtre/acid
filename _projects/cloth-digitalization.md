@@ -10,7 +10,7 @@ client : farfetch
 title: cloth digitalization
 
 
-
+still: assets/header/farfetch_header.png
 vimeolink: 
 ---
 

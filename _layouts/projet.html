@@ -12,7 +12,7 @@
 	{% if page.still !=' ' %}
 	<img class="banner-still" src="{{page.still | relative_url}}" alt="">
 	{% endif %}
-	{% if page.vimeolink !=' ' %}
+	{% if page.vimeolink != nil %}
 
 	<div class="banner" style="padding:42.39% 0 0 0;position:relative;"><iframe
 			src="https://player.vimeo.com/video/{{ page.vimeolink }}&autoplay=1&loop=1&title=0&byline=0&portrait=0&controls=0&dnt=1"
@@ -20,11 +20,13 @@
 
 	{% endif %}
 	<div class="nav-projet">
+
+			<a href="/" >×</a>
 		{% if page.previous.url %}
-		<a class="prev" href="{{page.previous.url | where: 'wip', empty}}">&laquo; prev</a>
+		<a class="prev" href="{{page.previous.url | where: 'wip', empty}}">&#8592;</a>
 		{% endif %}
 		{% if page.next.url %}
-		<a class="next" href="{{page.next.url | where: 'wip', empty}}">next &raquo;</a>
+		<a class="next" href="{{page.next.url | where: 'wip', empty}}">&#8594;</a>
 		{% endif %}
 	</div>
 	<div id="titre-wrapper"></div>
@@ -40,6 +42,27 @@
 
 </html>
 <style>
+	.nav-projet{
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+	}
+	.nav-projet * {
+		text-decoration: none;
+		font-size: 48px;
+		display: inline-block;
+		text-align: center;
+		min-width: 50px;	
+	}
+	.nav-projet *:hover {
+		background-color: var(--secondary);
+		color: var(--primary);
+	}
+	.cross {
+		/* transform-origin: center; */
+		position: absolute;
+		transform: translateX(-40px) rotate(45deg);
+	}
 	* {
 		text-transform: uppercase;
 		font-weight: 100;
@@ -58,7 +81,10 @@
 		width: 100%;
 		text-align: center;
 	}
-
+	h2 {
+		padding-bottom: 16px;
+	}
+	h2,
 	h3,
 	h4 {
 		margin: 0;
@@ -86,7 +112,7 @@
 	.ctn-img-4 {
 		display: flex;
 		flex-direction: row;
-		/* flex-wrap: wrap; */
+		flex-wrap: wrap;
 	}
 
 	.img-4 {
@@ -105,6 +131,10 @@
 	.img-1 {
 		width: 100%;
 	}
+	.img-portrait {
+		max-width: min(300px, 100%);
+		margin: 40px  auto;
+	}
 
 	.banner-still {
 		width: 100%;
@@ -114,6 +144,16 @@
 		padding:0;
 		margin-top: 20px;
 		border-top: 1px solid var(--secondary);
+	}
+	.p-lowercase {
+		color: var(--secondary);
+		text-transform: none;
+		max-width: 600px;
+		margin: 10px auto;
+		display: block;
+	}
+	.p-lowercase:first-of-type {
+		margin-top: 20px;
 	}
 </style>
 <script>

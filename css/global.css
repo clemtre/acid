@@ -30,6 +30,7 @@ iframe {
     border: 1px solid var(--secondary);
     border-left: none;
     border-right: none;
+    border-bottom: none;
 }
 .projet a {
     text-decoration: none;
@@ -42,7 +43,7 @@ iframe {
     padding: 10px 10px;
 }
 .entete p:first-of-type {
-    width: min(200px, 100%);
+    width: min(fit-content, 100%);
     text-align: center;
     padding: 10px 50px;
     border-right: 1px solid var(--secondary);
@@ -69,6 +70,7 @@ iframe {
     padding: 30px;
 }
 .paragraph p {
+    line-height: 24px;
     margin-top: 0;
 }
 .paragraph p:last-of-type {

@@ -9,7 +9,6 @@ id: 8
 client : nowhere fc
 title: 2021 season shirts
 
-vimeolink: ' '
 still: assets/header/STILL_HEADER_NWFC.png
 ---
 

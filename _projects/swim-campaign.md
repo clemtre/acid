@@ -9,8 +9,8 @@ id: 11
 client: CALVIN KLEIN
 title: SWIM CAMPAIGN
 
-still: assets/header/roncier.jpg
+still: 
 
 wip: true
-vimeolink: ''
+vimeolink: 752035462?h=2984bec358
 ---

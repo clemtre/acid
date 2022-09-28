@@ -5,23 +5,45 @@ title: Acid Rays
 {% include header.html src="assets/header/roncier.jpg" %}
 
 {% include nav.html active=3 %}
+<section class="paragraph">
+
+  <p>
+    CONSTANTLY EXPLORING STORYTELLING IN NEW WAYS, ACID’S INNOVATION DEPARTMENT « UNEXPLORED FIELDS » USES ITS OWN FICTIONAL UNIVERSE TO DEVELOP NEW TECHNOLOGIES, CONCEPTS AND ARTISTIC PROJECTS. THIS CREATIVE UNIVERSE FEEDS THE STUDIO’S VISION AND SERVES AS DNA TO THE GLOBALITY OF ALL PROJECTS.
+  </p>
+  <p>
+    ​INSPIRED BY NATURE, TECH, POETRY AND FINE ARTS, THE STUDIO EXPERIMENTS WITH DIGITAL AND TRADITIONAL TOOLS THAT FEED INSPIRATION AND LEAD TO THE BIRTH OF VISUAL NARRATIVES AND ARTIFACTS. INSPIRED BY SURREALISM AND MAGICAL REALISM, UNEXPLORED FIELDS AIMS TO CREATE HYPER REALISTIC ENVIRONMENTS THAT BLUR THE LINES BETWEEN WHAT IS REAL OR NOT, CONSIDERING CGI AND DIGITAL TOOLS LIKE A NEW ARTISANAL MEDIUM TO CREATE NARRATIVES, CONTENT AND EXPERIENCES.
+  </p>
+<p>
+
+  ​«WHEN I START WORKING ON A PROJECT, I LIKE TO TRIGGER MY CURIOSITY BY GENERATING RANDOMNESS FROM A SIMPLE RULE OR
+  PRINCIPLE. THIS APPROACH MAKE ME FEEL LIKE A NATURALIST OBSERVING AND TRYING TO UNDERSTAND THE COMPLEXITY OF THE
+  NATURE. AFTER MULTIPLE OBSERVATIONS, I’LL TRY TO CAPTURE THE ESSENCE OF MY DISCOVERIES TO SHOW THEM FROM THEIR BEST
+  ANGLE AND MOST TRUTHFUL FORM.»​ VIRGILE, ACID ART DIRECTOR
+</p>
+<p>
+  ​THIS ON-GOING RESEARCH IS BUILT AT THE PACE OF THE TEAM’S EXPERIMENTS AND IS AN IMAGINARY PLACE FOR CREATIVE AND
+  TECHNICAL IDEAS.​ AT ACID, WE ARE FIRM BELIEVERS IN COLLABORATION AS A WAY OF BREAKING BOUNDARIES, FEEL FREE TO EMAIL
+  US WITH AN IDEA YOU WOULD LIKE TO EXPLORE.
+</p>
+</section>
+
 {% for project in site.projects %}
-  {% if project.INN == true %}
-  {% capture wip %}{{project.wip}} {% endcapture %}
-  {% capture still %}{{project.still}} {% endcapture %}
-  {% capture title %}{{project.title}} {% endcapture %}
-  {% capture client %}{{project.client}} {% endcapture %}
-  {% capture vimeolink %}{{project.vimeolink}} {% endcapture %}
-  {% capture slug %}{{project.slug}} {% endcapture %}
-  {% capture url %}{{project.url}} {% endcapture %}
-  {% include post.html still=still vimeolink=vimeolink client=client slug=slug title=title url=url wip=wip %}
-  
+{% if project.INN == true %}
+{% capture wip %}{{project.wip}} {% endcapture %}
+{% capture still %}{{project.still}} {% endcapture %}
+{% capture title %}{{project.title}} {% endcapture %}
+{% capture client %}{{project.client}} {% endcapture %}
+{% capture vimeolink %}{{project.vimeolink}} {% endcapture %}
+{% capture slug %}{{project.slug}} {% endcapture %}
+{% capture url %}{{project.url}} {% endcapture %}
+{% include post.html still=still vimeolink=vimeolink client=client slug=slug title=title url=url wip=wip %}
+
 {% endif %}
 {% endfor %}
 
 
 
 <style>
-  
+
 
 </style>
