@@ -1,4 +1,4 @@
-a, p ,h1, h2, h3, h4, ul, li {
+a, p ,h1, h2, h3, h4, ul, li, table {
     color: var(--secondary);
     font-family: Helvetica;
 }
@@ -26,6 +26,7 @@ iframe {
     text-transform: uppercase;
     position: relative;
     top: 0;
+    height: auto;
     box-sizing: content-box;
     border: 1px solid var(--secondary);
     border-left: none;
@@ -39,13 +40,14 @@ iframe {
     position: relative
 }
 .entete p {
-    margin: 0;
-    padding: 10px 10px;
+    margin: auto 0;
+    /* padding: 10px 10px; */
 }
 .entete p:first-of-type {
     width: min(fit-content, 100%);
-    text-align: center;
-    padding: 10px 50px;
+    text-align: left;
+    padding: 10px 80px;
+    margin-right: 20px;
     border-right: 1px solid var(--secondary);
 }
 .projet:hover .banner, .projet:hover img  {
@@ -67,7 +69,7 @@ iframe {
 }
 
 .paragraph {
-    padding: 30px;
+    padding: 60px 80px;
 }
 .paragraph p {
     line-height: 24px;

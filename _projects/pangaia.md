@@ -39,4 +39,4 @@ vimeolink: 752035296?h=62d00c7323
 ![](/assets/projets/PANGAIA_08.png){:class="img-1"}
 ![](/assets/projets/PANGAIA_09.png){:class="img-1"}
 
-*752474457?h=3e913da821*{:class="vimeo"}
+*752474457?h=3e913da821*{:class="vim"}

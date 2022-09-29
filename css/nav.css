@@ -16,11 +16,12 @@
        color: var(--secondary);
        text-decoration: none;
        text-align: center;
+       padding: 1rem 0;
      }
      .nav li {
        justify-content: center;
        display: flex;
-       height: 3rem;
+       height: auto;
        flex: 1;
        align-items: center;
      }
