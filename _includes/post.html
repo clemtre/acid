@@ -1,5 +1,7 @@
 <section class="projet" id="{{include.slug | rstrip}}">
+    {% unless include.wip != ' ' %}
     <a href="{{include.url}}">
+        {% endunless %}
         <div class="entete">
             <p>{{ include.client }}</p>
             <p>{{ include.title }}</p>
@@ -24,6 +26,9 @@
             <p class="soon">Coming soon</p>
             {% endif %}
         </div>
+        {% unless include.wip == true %}
 
     </a>
+    {% endunless %}
+
 </section>

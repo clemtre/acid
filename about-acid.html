@@ -4,6 +4,7 @@ layout: default
 {% include header.html src="assets/header/roncier.jpg" %}
 
 {% include nav.html active=4 %}
+{% include acid.html %}
 
 <section class="paragraph">
   <p>
@@ -127,14 +128,18 @@ layout: default
     </section>
   </div>
   {% include footer.html %}    
-
-<style>
-  .logo {
-    max-width: 150px;
-    height: 50px;
+  
+  <style>
+    .logo {
+      transition: all .2s;
+      max-width: 100px;
+    max-height: 50px;
     object-fit: contain;
   }
 
+  .markee-wrap::-webkit-scrollbar {
+    display:none
+  }
   .markee {
     display: flex;
     flex-direction: row;
@@ -144,17 +149,22 @@ layout: default
     border-left: none;
     border-right: none;
     width: max-content;
-    gap: 50px;
+    gap: 80px;
     padding:30px 0;
     min-width: 100%;
     padding-left: 80px;
     padding-right: 100px;
   }
+  .logo:hover {
+    transform: scale(1.2);
+  }
   .markee-wrap {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     width: 100%;
     overflow-x: scroll;
   }
-
+  
   .A {
     display: flex;
     flex-wrap: wrap;
@@ -171,7 +181,7 @@ layout: default
     display: flex;
     flex-wrap: wrap;
   }
-
+  
   .services {
     text-align: right;
   }
@@ -197,13 +207,13 @@ layout: default
     max-width: 100%;
   }
   .info ul {
-
+    
     line-height: 20px;
     list-style-type: none;
   }
   .inline {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
   }
   .inline h2 {
     margin: 0;
@@ -215,20 +225,20 @@ layout: default
   h2 {
       margin: 16px 0 ;
       font-size: 16px;
-  }
-  .talks-exhib {
-
-  }
-  h1 {
-    font-size: 24px;
-    font-weight: 100;
-    margin-bottom: 23px;
-  }
-  .markee-fade{
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); 
-    position: absolute;
-    right: 0;
-  }
+    }
+    .talks-exhib {
+      
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 100;
+      margin-bottom: 23px;
+    }
+    .markee-fade{
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); 
+      position: absolute;
+      right: 0;
+    }
 </style>
