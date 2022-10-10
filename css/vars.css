@@ -1,4 +1,5 @@
 html {
+  --gutter: min(10vw, 80px);
   --primary: white;
   --secondary: black;
 }

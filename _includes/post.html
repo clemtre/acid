@@ -4,6 +4,7 @@
         {% endunless %}
         <div class="entete">
             <p>{{ include.client }}</p>
+            <span></span>
             <p>{{ include.title }}</p>
         </div>
         <div class="wrapper">
@@ -16,9 +17,9 @@
             {% endif %}
             {% if include.still !=' ' %}
             {% if include.wip != ' ' %}
-            <img class="wip" src="{{ include.still }}">
+            <img class="banner-still wip" src="{{ include.still }}">
             {% else %}
-            <img src="{{ include.still }}">
+            <img class="banner-still" src="{{ include.still }}">
             {% endif %}
 
             {% endif %}

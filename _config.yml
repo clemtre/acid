@@ -11,7 +11,17 @@ baseurl: /
 
 exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
 
+collections_dir: projects
 collections:
-    projects:
+    landing:
+      sort_by: id
+      output: true
+    commercials:
+      sort_by: id
+      output: true
+    special_projects:
+      sort_by: id
+      output: true
+    innovation:
       sort_by: id
       output: true

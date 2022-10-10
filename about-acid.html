@@ -27,14 +27,14 @@ layout: default
 
 <section class="info">
   <section class="A">
-    <p>CONTACT@ACIDRAYS.COM</p>
+    <p class="bold">CONTACT@ACIDRAYS.COM</p>
     <p>
       LONDON HQ : YALDING HOUSE, 2ND FLOOR W1W 5QA, UNITED KINGDOM <br>
       PARIS HQ : 88 RUE DE LA FOLIE MERICOURT 75011 PARIS, FRANCE
     </p>
     <section class="socials">
-      <a href="">INSTAGRAM</a>
-      <a href="">LINKEDIN</a>
+      <a class="bold" target="_blank" href="https://www.instagram.com/raysbyacid/">INSTAGRAM</a>
+      <a class="bold" target="_blank" href="https://linkedin.com/company/acidr">LINKEDIN</a>
     </section>
     <section class="images-studio">
       <img src="assets/about/EDN3635-Edit.png" alt="" />
@@ -149,10 +149,10 @@ layout: default
     border-left: none;
     border-right: none;
     width: max-content;
-    gap: 80px;
+    gap: var(--gutter);
     padding:30px 0;
     min-width: 100%;
-    padding-left: 80px;
+    padding-left: var(--gutter);
     padding-right: 100px;
   }
   .logo:hover {
@@ -186,7 +186,7 @@ layout: default
     text-align: right;
   }
   .info {
-    padding: 30px 80px;
+    padding: 30px var(--gutter);
     font-family: Helvetica;
     display: flex;
     flex-wrap: wrap;
@@ -195,6 +195,7 @@ layout: default
   }
   .images-studio {
     gap: 10px;
+    padding-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     margin-top: auto;
@@ -230,6 +231,7 @@ layout: default
       
     }
     h1 {
+      margin-top: 0;
       font-size: 24px;
       font-weight: 100;
       margin-bottom: 23px;
@@ -240,5 +242,13 @@ layout: default
       background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); 
       position: absolute;
       right: 0;
+    }
+    .bold {
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .socials {
+      display: flex;
+      gap: 40px;
     }
 </style>
