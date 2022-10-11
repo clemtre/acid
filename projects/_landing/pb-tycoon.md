@@ -26,6 +26,7 @@ vimeolink: 752035338?h=65390e28f1
 ### production assistant 
 #### andreas pappamikail
 
+*758293857?h=68580167f0*{:class="vim-ctrl"}
 ![](/assets/projets/01_LOLILOP_BIS_03_MAJ.png){:class="img-3"}
 ![](/assets/projets/01_LOLILOP_BIS_02_MAJ.png){:class="img-3"}
 ![](/assets/projets/LL1.png){:class="img-3"}

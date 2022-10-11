@@ -140,14 +140,15 @@ layout: default
   .markee-wrap::-webkit-scrollbar {
     display:none
   }
+  .markee:hover {
+    margin-left: calc(-100vw);
+  }
   .markee {
+    transition: all 7s;
     display: flex;
     flex-direction: row;
     align-items: center;
     /* overflow-x: scroll; */
-    border: 1px solid var(--secondary);
-    border-left: none;
-    border-right: none;
     width: max-content;
     gap: var(--gutter);
     padding:30px 0;
@@ -159,6 +160,9 @@ layout: default
     transform: scale(1.2);
   }
   .markee-wrap {
+    border: 1px solid var(--secondary);
+    border-left: none;
+    border-right: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
     width: 100%;
@@ -252,3 +256,5 @@ layout: default
       gap: 40px;
     }
 </style>
+<script>
+</script>

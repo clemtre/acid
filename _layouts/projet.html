@@ -13,18 +13,17 @@
 
 		{% if page.still != nil %}
 		<img class="banner-still" src="{{page.still | relative_url}}" alt="">
-	{% endif %}
-	{% if page.vimeolink != nil %}
+		{% endif %}
+		{% if page.vimeolink != nil %}
 
-	<iframe
-	src="https://player.vimeo.com/video/{{ page.vimeolink |rstrip }}&background=1"
-	style="position:absolute; top:0;left:0;width:100%;height:100%" frameborder="0"></iframe>
+		<iframe src="https://player.vimeo.com/video/{{ page.vimeolink |rstrip }}&background=1"
+			style="position:absolute; top:0;left:0;width:100%;height:100%" frameborder="0"></iframe>
 
-	{% endif %}
-</div>
+		{% endif %}
+	</div>
 	<div class="nav-projet">
 
-			<a href="/" >×</a>
+		<a href="/">×</a>
 		{% if page.previous.url %}
 		<a class="prev" href="{{page.previous.url | where: 'wip', empty}}">&#8592;</a>
 		{% endif %}
@@ -36,7 +35,7 @@
 	<div id="credits-wrapper"></div>
 	<hr>
 	<div id="content">
-		
+
 		{{ content }}
 	</div>
 
@@ -48,23 +47,27 @@
 	body {
 		padding-bottom: 100px;
 	}
-	.nav-projet{
+
+	.nav-projet {
 		z-index: 1000;
 		position: fixed;
 		bottom: 0;
 		right: 20px;
 	}
+
 	.nav-projet * {
 		text-decoration: none;
 		font-size: 48px;
 		display: inline-block;
 		text-align: center;
-		min-width: 50px;	
+		min-width: 50px;
 	}
+
 	.nav-projet *:hover {
 		background-color: var(--secondary);
 		color: var(--primary);
 	}
+
 	* {
 		text-transform: uppercase;
 		font-weight: 100;
@@ -83,9 +86,11 @@
 		width: 100%;
 		text-align: center;
 	}
+
 	h2 {
 		padding-bottom: 16px;
 	}
+
 	h2,
 	h3,
 	h4 {
@@ -120,37 +125,53 @@
 	.img-4 {
 		width: 25%;
 	}
-
+	
 	.img-2 {
 		width: 50%;
 	}
-
+	
 	.img-3 {
 		width: 33.33%;
 		object-fit: cover;
 	}
+	
+	.img-athor {
+		float: right;
+		object-fit: cover;
+		width: 70%;
+		height:calc(100vw/2.03)
 
+	}
+	.img-versace {
+		width: 40%;
+		float: right;
+		height:calc(100vw/2.03)
+	}
 	.img-1 {
 		width: 100%;
 	}
+
 	.img-portrait {
-		max-width: min(300px, 100%);
-		margin: 40px  auto;
+		max-width: min(1200px, 100%);
+		margin: 40px auto;
 	}
 
 	.wrapper-intro {
 		object-fit: cover;
 		min-height: calc(100vh - 4rem);
 	}
+
 	.banner-still {
 		width: 100%;
 	}
+
 	hr {
 		margin: 0;
-		padding:0;
+		padding: 0;
 		margin-top: 20px;
 		border-top: 1px solid var(--secondary);
 	}
+
 	.p-lowercase {
 		color: var(--secondary);
 		text-transform: none;
@@ -158,9 +179,11 @@
 		margin: 10px auto;
 		display: block;
 	}
+
 	.p-lowercase:first-of-type {
 		margin-top: 20px;
 	}
+
 	.generique-wrapper {
 		display: flex;
 		gap: 64px;
@@ -168,27 +191,45 @@
 		margin: 155px auto;
 		width: fit-content;
 	}
+
 	tr {
 		margin: 0;
 		height: 18px;
 
 	}
+
 	table {
 		margin-bottom: auto;
 		margin-left: auto;
 		margin-right: auto;
 	}
-	th{
+
+	th {
 		text-align: left;
 	}
-	td{
-	}
-	td:nth-of-type(1){
+
+
+	td:nth-of-type(1) {
 		opacity: .5;
 	}
-	td:nth-of-type(2){
+
+	td:nth-of-type(2) {
 		text-align: right;
 		opacity: .8;
+	}
+
+
+	.trim {
+
+		height: calc(100vw / 2.55);
+		object-fit: cover;
+	}
+
+	iframe {
+		pointer-events: all;
+	}
+	.vim-2:nth-of-type(2){
+		float: right;
 	}
 </style>
 <script>
@@ -204,9 +245,9 @@
 	titreWrapper.appendChild(titre)
 	titreWrapper.appendChild(date)
 
-	console.log($('.img-2'))
+
 	
-	if ($('table')){
+	if ($('table')) {
 		$('table').wrapAll('<div class="generique-wrapper"></div>')
 	}
 
@@ -239,7 +280,7 @@
 
 	}
 
-	if($('em.vim')){
+	if ($('em.vim')) {
 		$('em.vim').each(
 			function () {
 				const url = $(this).text()
@@ -251,23 +292,44 @@
 					</iframe></div>`)
 				$(this).remove()
 			}
-			)
-		}
-		if($('em.vim-ctrl')){
+		)
+	}
+	if ($('em.vim-ctrl')) {
 		$('em.vim-ctrl').each(
 			function () {
 				const url = $(this).text()
 				$(this).after(`
 				<div class="projet-content-vimeo" style="padding:56.39% 0 0 0;position:relative;">
 					<iframe
-                    src="https://player.vimeo.com/video/${url}"
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0">
+                    src="https://player.vimeo.com/video/${url}&title=0&byline=0&portrait=0"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen="allowfullscreen" frameborder="0">
 					</iframe></div>`)
 				$(this).remove()
 			}
-			)
-		}
-		if($('em.vim-3')){
+		)
+	}
+	if ($('em.vim-2')) {
+		$('em.vim-2').each(
+			function () {
+				const url = $(this).text()
+				$(this).after(`
+				<div class="projet-content-vimeo vim-2" 
+				style="
+				padding:50% 0 0 0;
+				position:relative; 
+				width:50%;
+				display:inline-block
+				">
+					<iframe
+                    src="https://player.vimeo.com/video/${url}&background=1"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0">
+					</iframe>
+				</div>`)
+				$(this).remove()
+			}
+		)
+	}
+	if ($('em.vim-3')) {
 		$('em.vim-3').each(
 			function () {
 				const url = $(this).text()
@@ -279,9 +341,9 @@
 					</iframe></div>`)
 				$(this).remove()
 			}
-			)
-		}
-		if($('em.vim-3-ligne')){
+		)
+	}
+	if ($('em.vim-3-ligne')) {
 		$('em.vim-3-ligne').each(
 			function () {
 				const url = $(this).text()
@@ -293,7 +355,48 @@
 					</iframe></div>`)
 				$(this).remove()
 			}
-			)
+		)
+	}
+	if ($('em.vim-versace')) {
+		$('em.vim-versace').each(
+			function () {
+				const url = $(this).text()
+				$(this).after(`
+				<div class="projet-content-vimeo vim-2" 
+				style="
+				padding:49% 0 0 0;
+				position:relative; 
+				width:60%;
+				display:inline-block
+				">
+					<iframe
+                    src="https://player.vimeo.com/video/${url}&background=1"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0">
+					</iframe>
+				</div>`)
+				$(this).remove()
+			}
+		)
 		}
-
+		if ($('em.vim-athor')) {
+		$('em.vim-athor').each(
+			function () {
+				const url = $(this).text()
+				$(this).after(`
+				<div class="projet-content-vimeo vim-2" 
+				style="
+				padding:49% 0 0 0;
+				position:relative; 
+				width:30%;
+				display:inline-block
+				">
+					<iframe
+                    src="https://player.vimeo.com/video/${url}&background=1"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0">
+					</iframe>
+				</div>`)
+				$(this).remove()
+			}
+		)
+		}
 </script>

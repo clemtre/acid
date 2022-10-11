@@ -34,5 +34,5 @@ vimeolink: 752035232?h=607bc41410
 *725738393?h=01e557fcfd*{:class="vim-3 img-3"}
 ![](/assets/projets/MOVEMENT_06.jpg){:class="img-3"}
 ![](/assets/projets/MOVEMENT_07.png){:class="img-3"}
-*750880259?h=e7f951bfa1*{:class="vim"}
+*750880259?h=e7f951bfa1*{:class="vim-ctrl"}
 ![](/assets/projets/MOVEMENT_08.png)
