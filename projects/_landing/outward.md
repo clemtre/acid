@@ -7,11 +7,11 @@ INN: true
 
 id: 2
 client : unexplored fields
-title: outwards
+title: outward
 
 
 wip: true
-still: assets/Still_Header_Outwards_Scope.jpg
+still: assets/header/outward.jpeg
 
 vimeolink: 
 ---
