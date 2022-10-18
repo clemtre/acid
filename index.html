@@ -13,9 +13,7 @@ title: Acid Rays
 <p>COMPOSED BY A TEAM OF ART DIRECTORS, PRODUCERS, 3D ARTISTS AND MARKETING STRATEGISTS, ACID IS DEDICATED TO REAL-TIME AND TRADITIONAL PRODUCTION AND HAS AN IN-HOUSE MOTION CAPTURE STUDIO TO CREATE BESPOKE EXPERIENCES FOR BRANDS. AESTHETIC IN THE METAVERSE IS NOT A COMPROMISE.</p>
 </section>
 
-
 {% for project in site.landing %}
-{% if true == true %}
 {% capture wip %}{{project.wip}} {% endcapture %}
 {% capture still %}{{project.still}} {% endcapture %}
 {% capture title %}{{project.title}} {% endcapture %}
@@ -24,7 +22,6 @@ title: Acid Rays
 {% capture slug %}{{project.slug}} {% endcapture %}
 {% capture url %}{{project.url}} {% endcapture %}
 {% include post.html still=still vimeolink=vimeolink client=client slug=slug title=title url=url wip=wip %}
-{% endif %}
 {% endfor %}
 
 

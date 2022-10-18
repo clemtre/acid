@@ -27,8 +27,7 @@ title: Acid Rays
 </p>
 </section>
 
-{% for project in site.projects %}
-{% if project.INN == true %}
+{% for project in site.innovation %}
 {% capture wip %}{{project.wip}} {% endcapture %}
 {% capture still %}{{project.still}} {% endcapture %}
 {% capture title %}{{project.title}} {% endcapture %}
@@ -38,7 +37,6 @@ title: Acid Rays
 {% capture url %}{{project.url}} {% endcapture %}
 {% include post.html still=still vimeolink=vimeolink client=client slug=slug title=title url=url wip=wip %}
 
-{% endif %}
 {% endfor %}
 
 

@@ -11,8 +11,7 @@ title: Acid Rays
   <p>DEDICATED TO THE PRODUCTION AND CREATION OF SPECIAL PROJECTS, « RAYS » PRODUCTION FOCUSES ON LUXURY AND EXCLUSIVE CLIENTS, AS WELL AS PROJECTS THAT STAND OUT FROM THE ORDINARY.</p>
   </section>
 
-{% for project in site.projects %}
-  {% if project.SPE == true %}
+{% for project in site.special_projects %}
   {% capture wip %}{{project.wip}} {% endcapture %}
   {% capture still %}{{project.still}} {% endcapture %}
   {% capture title %}{{project.title}} {% endcapture %}
@@ -21,7 +20,6 @@ title: Acid Rays
   {% capture slug %}{{project.slug}} {% endcapture %}
   {% capture url %}{{project.url}} {% endcapture %}
   {% include post.html still=still vimeolink=vimeolink client=client slug=slug title=title url=url wip=wip %}  
-{% endif %}
 {% endfor %}
 
 

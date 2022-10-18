@@ -11,8 +11,7 @@ title: Acid Rays
 
   
 
-{% for project in site.projects %}
-  {% if project.COM == true %}
+{% for project in site.commercials %}
   {% capture wip %}{{project.wip}} {% endcapture %}
   {% capture still %}{{project.still}} {% endcapture %}
   {% capture title %}{{project.title}} {% endcapture %}
@@ -21,7 +20,6 @@ title: Acid Rays
   {% capture slug %}{{project.slug}} {% endcapture %}
   {% capture url %}{{project.url}} {% endcapture %}
   {% include post.html still=still vimeolink=vimeolink client=client slug=slug title=title url=url wip=wip %}  
-{% endif %}
 {% endfor %}
 
 
